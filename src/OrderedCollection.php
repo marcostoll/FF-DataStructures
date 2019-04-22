@@ -55,13 +55,13 @@ class OrderedCollection extends IndexedCollection
      * @param int $offset
      * @throws \InvalidArgumentException accepts only integers as $offset
      */
-    public function get($offset)
+    public function get($offset, $default = null)
     {
         if (!is_int($offset)) {
             throw new \InvalidArgumentException('accepts only integers as $offset');
         }
 
-        return parent::get($offset);
+        return parent::get($offset, $default);
     }
 
     /**

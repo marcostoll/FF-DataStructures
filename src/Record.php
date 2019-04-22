@@ -82,14 +82,15 @@ class Record implements \IteratorAggregate
     }
 
     /**
-     * Retrieves a field value
+     * Retrieves a field value or the $default value if $key is not present
      *
      * @param string $key
-     * @return mixed|null
+     * @param mixed $default
+     * @return mixed
      */
-    public function getField(string $key)
+    public function getField(string $key, $default = null)
     {
-        return $this->data->has($key) ? $this->data->get($key) : null;
+        return $this->data->get($key, $default);
     }
 
     /**
@@ -206,6 +207,10 @@ class Record implements \IteratorAggregate
      * the corresponding field access method with the underscored
      * version of the field name is called.
      *
+     * The get-wrapper will use the first and only the first argument to
+     * pass to the getField() call as the $default parameter. If the get-wrapper will be called without
+     * any argument getField(null) will be called.
+     *
      * The set-wrapper will use the first and only the first argument to
      * pass to the setField() call. If the set-wrapper will be called without
      * any argument setField({field}, null) will be called.
@@ -246,7 +251,8 @@ class Record implements \IteratorAggregate
         $field = StringUtils::underscore($match[2]);
         switch ($match[1]) {
             case 'get':
-                return $this->getField($field);
+                $default = $args[0] ?? null;
+                return $this->getField($field, $default);
             case 'set':
                 $value = $args[0] ?? null;
                 return $this->setField($field, $value);

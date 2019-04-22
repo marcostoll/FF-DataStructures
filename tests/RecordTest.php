@@ -135,6 +135,15 @@ class RecordTest extends TestCase
     /**
      * Tests the namesake method/feature
      */
+    public function testGetFieldDefault()
+    {
+        $this->uut->setData(self::SOME_DATA);
+        $this->assertEquals('foo', $this->uut->getField('void', 'foo'));
+    }
+
+    /**
+     * Tests the namesake method/feature
+     */
     public function testSetField()
     {
         $same = $this->uut->setField('foo', 'bar');
@@ -205,9 +214,7 @@ class RecordTest extends TestCase
     {
         $this->uut->setData(self::SOME_DATA);
 
-        $this->assertEquals($this->uut->getField('null'), $this->uut->getNull());
-        $this->assertEquals($this->uut->getField('my_field'), $this->uut->getMyField());
-        $this->assertNull($this->uut->getNonExistingField());
+        $this->assertEquals('foo', $this->uut->getNonExistingField('foo'));
     }
 
     /**

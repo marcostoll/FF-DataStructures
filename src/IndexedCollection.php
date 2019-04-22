@@ -34,14 +34,15 @@ class IndexedCollection extends Collection implements \ArrayAccess
     }
 
     /**
-     * Retrieves the item at the given index (if any)
+     * Retrieves the item at the given index or the $default value if $index is not present
      *
      * @param int|string $index
-     * @return mixed|null
+     * @param mixed $default
+     * @return mixed
      */
-    public function get($index)
+    public function get($index, $default = null)
     {
-        return $this->items[$index] ?? null;
+        return $this->items[$index] ?? $default;
     }
 
     /**

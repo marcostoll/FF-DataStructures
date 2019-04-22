@@ -60,6 +60,15 @@ class IndexedCollectionTest extends TestCase
     /**
      * Tests the namesake method/feature
      */
+    public function testGetDefault()
+    {
+        $this->uut->setItems(self::SOME_ITEMS);
+        $this->assertEquals('foo', $this->uut->get('void', 'foo'));
+    }
+
+    /**
+     * Tests the namesake method/feature
+     */
     public function testSet()
     {
         $same = $this->uut->set(0, 'foo');
