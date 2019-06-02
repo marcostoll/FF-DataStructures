@@ -2,7 +2,7 @@
   "name": "fastforward/data-structures",
   "description": "A component providing basic and generic data structure implementations - part of the Fast Forward Components Collection",
   "type": "library",
-  "license": "proprietary",
+  "license": "MIT",
   "minimum-stability": "stable",
   "authors": [
     {
@@ -14,7 +14,7 @@
   ],
   "require": {
     "php": ">=7.2",
-    "fastforward/utilities": "dev-master"
+    "fastforward/common": "^1.0.0"
   },
   "require-dev": {
     "phpunit/phpunit": "^8"
@@ -22,7 +22,7 @@
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/marcostoll/FF-Utilities"
+      "url": "https://github.com/marcostoll/FF-Common"
     }
   ],
   "autoload": {
