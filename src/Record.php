@@ -10,7 +10,7 @@ declare(strict_types=1);
 
 namespace FF\DataStructures;
 
-use FF\Common\Utils\StringUtils;
+use FF\Utils\StringUtils;
 
 /**
  * Class Record
