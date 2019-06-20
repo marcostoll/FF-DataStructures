@@ -1,6 +1,6 @@
 {
   "name": "fastforward/data-structures",
-  "description": "A component providing basic and generic data structure implementations - part of the Fast Forward Components Collection",
+  "description": "A component providing basic and generic data structure implementations - part of the Fast Forward Family",
   "type": "library",
   "license": "MIT",
   "minimum-stability": "stable",

@@ -1,27 +1,36 @@
-FF\DataStructures | Fast Forward Components Collection
-===============================================================================
+FF\DataStructures | Fast Forward Family
+========================================================================================================================
 
 by Marco Stoll
 
 - <marco.stoll@rocketmail.com>
 - <http://marcostoll.de>
 - <https://github.com/marcostoll>
+- <https://github.com/marcostoll/FF>
 - <https://github.com/marcostoll/FF-DataStructures>
 ------------------------------------------------------------------------------------------------------------------------
 
-# What is the Fast Forward Components Collection?
-The Fast Forward Components Collection, in short **Fast Forward** or **FF**, is a loosely coupled collection of code 
-repositories each addressing common problems while building web application. Multiple **FF** components may be used 
-together if desired. And some more complex **FF** components depend on other rather basic **FF** components.
+# What is the Fast Forward Family?
+Fast Forward, in short **FF**, is a template for building web applications. The **FF Family** is a series of basic
+repositories on which **FF** depends on but may also be used independently if desired.
 
-**FF** is not a framework in and of itself and therefore should not be called so. 
-But you may orchestrate multiple **FF** components to build an web application skeleton that provides the most common 
-tasks.
+**FF** is not a framework in and of itself and therefore should not be called so. But you may orchestrate multiple 
+**FF** components to build an web application skeleton that provides the most common tasks.
 
-# Introduction
+# Introduction - What is FF\DataStructures?
 
 The **FF\DataStructures** component provides generic implementations of common data structure patterns. Instances of the
 various data structure classes are designed to hold arbitrary data and provide apis to access and manipulate them.
+
+# Installation
+
+## via Composer
+
+@todo
+
+## manual Installation
+
+@todo
 
 # The Data Structures Classes
 
@@ -121,7 +130,5 @@ It event comes with a set of methods the use it as a stack.
 
 # Road Map
 
-The extend of the **DataStructures** component is mainly defined by the needs of other **FF** components. So its code
-base will grow as new feature requests pop of within the **FF** components collection.
-
-Most likely tree and queue implementations will be added to the list of provided data structures in the near future.
+- basic tree implementation
+- basic queue implementation
