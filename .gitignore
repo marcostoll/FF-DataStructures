@@ -1,5 +1,4 @@
 .idea/
 
 /vendor
-
-todos.md
+composer.lock
