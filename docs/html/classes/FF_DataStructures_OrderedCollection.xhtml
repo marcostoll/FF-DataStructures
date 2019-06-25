@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - FF\DataStructures\OrderedCollection</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#FF_DataStructures">FF\DataStructures</a>
+          </li>
+          <li class="separator">OrderedCollection</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#hierarchy">Hierarchy</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="#history">History</a>
+          </li>
+          <li>
+            <a href="../source/OrderedCollection.php.xhtml#line24">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>FF\DataStructures\</small>OrderedCollection</h1>
+        <h4>Class OrderedCollection</h4>
+        <p>Represents an ordered list structure of consecutive indexed items beginning with 0.<br/>Stores multiple (or zero) items that typically share a common data type or ancestor.<br/><br/>The collection's items may be accessed via index. New Items may be appended or prepended.<br/>Stack operations may be performed.</p>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class OrderedCollection
+                extends <a title="FF\DataStructures\IndexedCollection" href="../classes/FF_DataStructures_IndexedCollection.xhtml">IndexedCollection</a>
+            {<br/><ul class="none"><li>// Inherited members from <span title="FF\DataStructures\Collection">Collection</span></li><li>protected array <a href="#members">$items</a>;
+                        </li></ul><ul class="none"><li>// methods</li><li>public void <a title="FF\DataStructures\OrderedCollection" href="../classes/FF_DataStructures_OrderedCollection/setItems.xhtml">setItems</a>()
+                    </li><li>public bool <a title="FF\DataStructures\OrderedCollection" href="../classes/FF_DataStructures_OrderedCollection/has.xhtml">has</a>()
+                    </li><li>public void <a title="FF\DataStructures\OrderedCollection" href="../classes/FF_DataStructures_OrderedCollection/get.xhtml">get</a>()
+                    </li><li>public <span title="OrderedCollection">OrderedCollection</span> <a title="FF\DataStructures\OrderedCollection" href="../classes/FF_DataStructures_OrderedCollection/set.xhtml">set</a>()
+                    </li><li>public void <a title="FF\DataStructures\OrderedCollection" href="../classes/FF_DataStructures_OrderedCollection/unset.xhtml">unset</a>()
+                    </li><li>public mixed|null <a title="FF\DataStructures\OrderedCollection" href="../classes/FF_DataStructures_OrderedCollection/getFirst.xhtml">getFirst</a>()
+                    </li><li>public mixed|null <a title="FF\DataStructures\OrderedCollection" href="../classes/FF_DataStructures_OrderedCollection/getLast.xhtml">getLast</a>()
+                    </li><li>public $this <a title="FF\DataStructures\OrderedCollection" href="../classes/FF_DataStructures_OrderedCollection/truncate.xhtml">truncate</a>()
+                    </li><li>public $this <a title="FF\DataStructures\OrderedCollection" href="../classes/FF_DataStructures_OrderedCollection/append.xhtml">append</a>()
+                    </li><li>public $this <a title="FF\DataStructures\OrderedCollection" href="../classes/FF_DataStructures_OrderedCollection/sort.xhtml">sort</a>()
+                    </li><li>public $this <a title="FF\DataStructures\OrderedCollection" href="../classes/FF_DataStructures_OrderedCollection/push.xhtml">push</a>()
+                    </li><li>public $this <a title="FF\DataStructures\OrderedCollection" href="../classes/FF_DataStructures_OrderedCollection/unshift.xhtml">unshift</a>()
+                    </li><li>public mixed|null <a title="FF\DataStructures\OrderedCollection" href="../classes/FF_DataStructures_OrderedCollection/pop.xhtml">pop</a>()
+                    </li><li>public mixed|null <a title="FF\DataStructures\OrderedCollection" href="../classes/FF_DataStructures_OrderedCollection/shift.xhtml">shift</a>()
+                    </li></ul><ul class="none"><li>// Inherited methods from <span title="FF\DataStructures\IndexedCollection">IndexedCollection</span></li><li>public bool <a title="FF\DataStructures\IndexedCollection" href="../classes/FF_DataStructures_IndexedCollection/has.xhtml">has</a>()
+                        </li><li>public mixed <a title="FF\DataStructures\IndexedCollection" href="../classes/FF_DataStructures_IndexedCollection/get.xhtml">get</a>()
+                        </li><li>public $this <a title="FF\DataStructures\IndexedCollection" href="../classes/FF_DataStructures_IndexedCollection/set.xhtml">set</a>()
+                        </li><li>public $this <a title="FF\DataStructures\IndexedCollection" href="../classes/FF_DataStructures_IndexedCollection/unset.xhtml">unset</a>()
+                        </li><li>public array <a title="FF\DataStructures\IndexedCollection" href="../classes/FF_DataStructures_IndexedCollection/getKeys.xhtml">getKeys</a>()
+                        </li><li>public int|string|null <a title="FF\DataStructures\IndexedCollection" href="../classes/FF_DataStructures_IndexedCollection/search.xhtml">search</a>()
+                        </li><li>public void <a title="FF\DataStructures\IndexedCollection" href="../classes/FF_DataStructures_IndexedCollection/offsetExists.xhtml">offsetExists</a>()
+                        </li><li>public void <a title="FF\DataStructures\IndexedCollection" href="../classes/FF_DataStructures_IndexedCollection/offsetGet.xhtml">offsetGet</a>()
+                        </li><li>public void <a title="FF\DataStructures\IndexedCollection" href="../classes/FF_DataStructures_IndexedCollection/offsetSet.xhtml">offsetSet</a>()
+                        </li><li>public void <a title="FF\DataStructures\IndexedCollection" href="../classes/FF_DataStructures_IndexedCollection/offsetUnset.xhtml">offsetUnset</a>()
+                        </li></ul><ul class="none"><li>// Inherited methods from <span title="FF\DataStructures\Collection">Collection</span></li><li>public void <a title="FF\DataStructures\Collection" href="../classes/FF_DataStructures_Collection/__construct.xhtml">__construct</a>()
+                        </li><li>public array <a title="FF\DataStructures\Collection" href="../classes/FF_DataStructures_Collection/getItems.xhtml">getItems</a>()
+                        </li><li>public $this <a title="FF\DataStructures\Collection" href="../classes/FF_DataStructures_Collection/setItems.xhtml">setItems</a>()
+                        </li><li>public $this <a title="FF\DataStructures\Collection" href="../classes/FF_DataStructures_Collection/clear.xhtml">clear</a>()
+                        </li><li>public bool <a title="FF\DataStructures\Collection" href="../classes/FF_DataStructures_Collection/isEmpty.xhtml">isEmpty</a>()
+                        </li><li>public int <a title="FF\DataStructures\Collection" href="../classes/FF_DataStructures_Collection/getLength.xhtml">getLength</a>()
+                        </li><li>public array <a title="FF\DataStructures\Collection" href="../classes/FF_DataStructures_Collection/map.xhtml">map</a>()
+                        </li><li>public $this <a title="FF\DataStructures\Collection" href="../classes/FF_DataStructures_Collection/filter.xhtml">filter</a>()
+                        </li><li>public int <a title="FF\DataStructures\Collection" href="../classes/FF_DataStructures_Collection/count.xhtml">count</a>()
+                        </li><li>public ArrayIterator <a title="FF\DataStructures\Collection" href="../classes/FF_DataStructures_Collection/getIterator.xhtml">getIterator</a>()
+                        </li></ul>
+
+            }<br/></div>
+        <h2 id="hierarchy">Hierarchy</h2>
+        <div class="styled">
+          <h4>Extends</h4>
+          <ul>
+            <li>
+              <a title="FF\DataStructures\IndexedCollection" href="../classes/FF_DataStructures_IndexedCollection.xhtml">FF\DataStructures\IndexedCollection</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="items"><strong>$items</strong>
+                —
+                array</li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>public</h4>
+          <ul>
+            <li id="append"><a title="FF\DataStructures\OrderedCollection" href="../classes/FF_DataStructures_OrderedCollection/append.xhtml">append()</a>
+                — Appends the items of a given array or collection to the end of this collection</li>
+            <li id="get"><a title="FF\DataStructures\OrderedCollection" href="../classes/FF_DataStructures_OrderedCollection/get.xhtml">get()</a>
+                — {@inheritdoc}</li>
+            <li id="getFirst"><a title="FF\DataStructures\OrderedCollection" href="../classes/FF_DataStructures_OrderedCollection/getFirst.xhtml">getFirst()</a>
+                — Retrieves the first item of the collection (if any)</li>
+            <li id="getLast"><a title="FF\DataStructures\OrderedCollection" href="../classes/FF_DataStructures_OrderedCollection/getLast.xhtml">getLast()</a>
+                — Retrieves the last item of the collection (if any)</li>
+            <li id="has"><a title="FF\DataStructures\OrderedCollection" href="../classes/FF_DataStructures_OrderedCollection/has.xhtml">has()</a>
+                — {@inheritdoc}</li>
+            <li id="pop"><a title="FF\DataStructures\OrderedCollection" href="../classes/FF_DataStructures_OrderedCollection/pop.xhtml">pop()</a>
+                — Pops the last item of the collection</li>
+            <li id="push"><a title="FF\DataStructures\OrderedCollection" href="../classes/FF_DataStructures_OrderedCollection/push.xhtml">push()</a>
+                — Appends one or more new items to the end of the collection</li>
+            <li id="set"><a title="FF\DataStructures\OrderedCollection" href="../classes/FF_DataStructures_OrderedCollection/set.xhtml">set()</a>
+                — {@inheritdoc}</li>
+            <li id="setItems"><a title="FF\DataStructures\OrderedCollection" href="../classes/FF_DataStructures_OrderedCollection/setItems.xhtml">setItems()</a>
+                — {@inheritdoc}</li>
+            <li id="shift"><a title="FF\DataStructures\OrderedCollection" href="../classes/FF_DataStructures_OrderedCollection/shift.xhtml">shift()</a>
+                — Shifts the first item of the collection</li>
+            <li id="sort"><a title="FF\DataStructures\OrderedCollection" href="../classes/FF_DataStructures_OrderedCollection/sort.xhtml">sort()</a>
+                — Sorts the items of the collection using the given callback</li>
+            <li id="truncate"><a title="FF\DataStructures\OrderedCollection" href="../classes/FF_DataStructures_OrderedCollection/truncate.xhtml">truncate()</a>
+                — Truncates the collection to the given length</li>
+            <li id="unset"><a title="FF\DataStructures\OrderedCollection" href="../classes/FF_DataStructures_OrderedCollection/unset.xhtml">unset()</a>
+                — {@inheritdoc}</li>
+            <li id="unshift"><a title="FF\DataStructures\OrderedCollection" href="../classes/FF_DataStructures_OrderedCollection/unshift.xhtml">unshift()</a>
+                — Prepends an item to the beginning of the collection</li>
+          </ul>
+          <h3>Inherited from <a title="FF\DataStructures\IndexedCollection" href="../classes/FF_DataStructures_IndexedCollection.xhtml">FF\DataStructures\IndexedCollection</a></h3>
+          <h4>public</h4>
+          <ul>
+            <li id="get"><a title="FF\DataStructures\IndexedCollection" href="../classes/FF_DataStructures_IndexedCollection/get.xhtml">get()</a>
+                — Retrieves the item at the given index or the $default value if $index is not present</li>
+            <li id="getKeys"><a title="FF\DataStructures\IndexedCollection" href="../classes/FF_DataStructures_IndexedCollection/getKeys.xhtml">getKeys()</a>
+                — Retrieves the list of indexes used for all the items in the collection</li>
+            <li id="has"><a title="FF\DataStructures\IndexedCollection" href="../classes/FF_DataStructures_IndexedCollection/has.xhtml">has()</a>
+                — Checks of a non-null value is present at the given index</li>
+            <li id="offsetExists"><a title="FF\DataStructures\IndexedCollection" href="../classes/FF_DataStructures_IndexedCollection/offsetExists.xhtml">offsetExists()</a>
+                — {@inheritdoc}</li>
+            <li id="offsetGet"><a title="FF\DataStructures\IndexedCollection" href="../classes/FF_DataStructures_IndexedCollection/offsetGet.xhtml">offsetGet()</a>
+                — {@inheritdoc}</li>
+            <li id="offsetSet"><a title="FF\DataStructures\IndexedCollection" href="../classes/FF_DataStructures_IndexedCollection/offsetSet.xhtml">offsetSet()</a>
+                — {@inheritdoc}</li>
+            <li id="offsetUnset"><a title="FF\DataStructures\IndexedCollection" href="../classes/FF_DataStructures_IndexedCollection/offsetUnset.xhtml">offsetUnset()</a>
+                — {@inheritdoc}</li>
+            <li id="search"><a title="FF\DataStructures\IndexedCollection" href="../classes/FF_DataStructures_IndexedCollection/search.xhtml">search()</a>
+                — Retrieves the first index of the given $item if present</li>
+            <li id="set"><a title="FF\DataStructures\IndexedCollection" href="../classes/FF_DataStructures_IndexedCollection/set.xhtml">set()</a>
+                — Replaces the item at the given index</li>
+            <li id="unset"><a title="FF\DataStructures\IndexedCollection" href="../classes/FF_DataStructures_IndexedCollection/unset.xhtml">unset()</a>
+                — Removes the item at the given offset (if exists)</li>
+          </ul>
+          <h3>Inherited from <a title="FF\DataStructures\Collection" href="../classes/FF_DataStructures_Collection.xhtml">FF\DataStructures\Collection</a></h3>
+          <h4>public</h4>
+          <ul>
+            <li id="clear"><a title="FF\DataStructures\Collection" href="../classes/FF_DataStructures_Collection/clear.xhtml">clear()</a>
+                — Removes all items from the collection</li>
+            <li id="count"><a title="FF\DataStructures\Collection" href="../classes/FF_DataStructures_Collection/count.xhtml">count()</a>
+                — Retrieves the amount of items stored within the collection</li>
+            <li id="filter"><a title="FF\DataStructures\Collection" href="../classes/FF_DataStructures_Collection/filter.xhtml">filter()</a>
+                — Applies the filter callback to all of the collection's items</li>
+            <li id="getItems">
+              <a title="FF\DataStructures\Collection" href="../classes/FF_DataStructures_Collection/getItems.xhtml">getItems()</a>
+            </li>
+            <li id="getIterator"><a title="FF\DataStructures\Collection" href="../classes/FF_DataStructures_Collection/getIterator.xhtml">getIterator()</a>
+                — Retrieves an iterator to provide traversable support</li>
+            <li id="getLength"><a title="FF\DataStructures\Collection" href="../classes/FF_DataStructures_Collection/getLength.xhtml">getLength()</a>
+                — Retrieves the number of items stored within the collection</li>
+            <li id="isEmpty"><a title="FF\DataStructures\Collection" href="../classes/FF_DataStructures_Collection/isEmpty.xhtml">isEmpty()</a>
+                — Checks whether this collection is considered empty</li>
+            <li id="map"><a title="FF\DataStructures\Collection" href="../classes/FF_DataStructures_Collection/map.xhtml">map()</a>
+                — Retrieves an array of values containing the results of applying the callback function to each item</li>
+            <li id="setItems">
+              <a title="FF\DataStructures\Collection" href="../classes/FF_DataStructures_Collection/setItems.xhtml">setItems()</a>
+            </li>
+          </ul>
+        </div>
+        <h2 id="history">History</h2>
+        <ul class="styled history">
+          <li>
+            <h3>2019-04-22T10:48:12+02:00 (commit #<span title="52260fc93aa01e51808d0a72920be567793fef06">52260fc</span>)</h3>
+            <div>
+              <p>
+                        Author: Marco Stoll (marco.stoll@rocketmail.com) /
+                        Commiter: Marco Stoll (marco.stoll@rocketmail.com)
+                    </p>
+              <pre class="wrapped">[FEATURE] adds default values when accessing non-existing data</pre>
+            </div>
+          </li>
+          <li>
+            <h3>2019-04-16T10:48:49+02:00 (commit #<span title="ac60c683c0ad76759da7b14df71b80582cb25913">ac60c68</span>)</h3>
+            <div>
+              <p>
+                        Author: Marco Stoll (marco.stoll@rocketmail.com) /
+                        Commiter: Marco Stoll (marco.stoll@rocketmail.com)
+                    </p>
+              <pre class="wrapped">initial commit</pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.12.0-dev - Copyright (C) 2010 - 2019 by Arne Blankerts and Contributors</span>
+    </footer>
+  </body>
+</html>
