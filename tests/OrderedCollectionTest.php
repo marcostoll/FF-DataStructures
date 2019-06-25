@@ -90,7 +90,17 @@ class OrderedCollectionTest extends TestCase
     /**
      * Tests the namesake method/feature
      */
-    public function testSetPush()
+    public function testSetReplace()
+    {
+        $newValue = 'foo';
+        $this->uut->setItems(self::SOME_ITEMS)->set(3, $newValue);
+        $this->assertEquals($newValue, $this->uut[3]);
+    }
+
+    /**
+     * Tests the namesake method/feature
+     */
+    public function testSetAppend()
     {
         $newItem = '5th';
         $this->uut->setItems(self::SOME_ITEMS)->set(42, $newItem);
@@ -196,6 +206,16 @@ class OrderedCollectionTest extends TestCase
         $this->uut->unshift(...self::SOME_ITEMS);
         $this->assertEquals(self::SOME_ITEMS, $this->uut->getItems());
 
+    }
+
+    /**
+     * Tests the namesake method/feature
+     */
+    public function testPop()
+    {
+        $item = $this->uut->setItems(self::SOME_ITEMS)->pop();
+        $this->assertEquals(self::SOME_ITEMS[3], $item);
+        $this->assertEquals(count(self::SOME_ITEMS) - 1, count($this->uut));
     }
 
     /**
