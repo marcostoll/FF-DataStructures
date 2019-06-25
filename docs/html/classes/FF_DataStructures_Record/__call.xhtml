@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - FF\DataStructures\Record::__call</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../../classes.xhtml">Classes</a>
+        </li>
+        <li class="separator">
+          <a href="../../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../../classes.xhtml#FF_DataStructures">FF\DataStructures</a>
+          </li>
+          <li class="separator">
+            <a title="FF\DataStructures\Record" href="../../classes/FF_DataStructures_Record.xhtml">Record</a>
+          </li>
+          <li class="separator">__call</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#parameter">Parameter</a>
+          </li>
+          <li>
+            <a href="#return">Return</a>
+          </li>
+          <li>
+            <a href="../../source/Record.php.xhtml#line238">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1><small>FF\DataStructures\Record::</small>__call</h1>
+        <h4>Provides generic access to the record's fields</h4>
+        <p>If a camel case version of a field name is used for $method name
+with either of these prefixes
+- get    -&gt; getField
+- set    -&gt; setField
+- unset  -&gt; unsetField
+- has    -&gt; hasField
+the corresponding field access method with the underscored
+version of the field name is called.
+
+The get-wrapper will use the first and only the first argument to
+pass to the getField() call as the $default parameter. If the get-wrapper will be called without
+any argument getField(null) will be called.
+
+The set-wrapper will use the first and only the first argument to
+pass to the setField() call. If the set-wrapper will be called without
+any argument setField({field}, null) will be called.
+
+Examples:
+&lt;code&gt;
+$myRecord-&gt;setCaption('new Caption') &lt;=&gt; $myRecord-&gt;setField('caption', 'new Caption');
+$myRecord-&gt;getCreationDate()         &lt;=&gt; $myRecord-&gt;getField('creation_date');
+$myRecord-&gt;unsetCreationDate()       &lt;=&gt; $myRecord-&gt;unsetField('creation_date');
+$myRecord-&gt;hasCreationDate()         &lt;=&gt; $myRecord-&gt;hasField('creation_date');
+&lt;/code&gt;
+
+Triggers errors (E_USER_ERROR) if unsupported method calls are processed.
+
+Examples leading to errors:
+&lt;code&gt;
+$myRecord-&gt;foo(); // assuming no public method foo() is provided
+$myRecord-&gt;get_something(); // assuming no public method get_something() is provided
+&lt;/code&gt;</p>
+        <ul/>
+        <h2 id="signature">Signature</h2>
+        <div class="styled synopsis">
+          <code>public function __call(string
+        $method,
+            [array
+        $args = NULL] )
+            </code>
+        </div>
+        <h2 id="parameterlist">Parameters</h2>
+        <dl class="styled">
+          <dt><code>$method</code>
+                —
+                string</dt>
+          <dd>The name of the method invoked</dd>
+          <dt><code>$args</code>
+                —
+                array</dt>
+          <dd>A list of arguments passed to the method invoked<br/><br/><br/>      </dd>
+        </dl>
+        <h2 id="return">Returns</h2>
+        <dl class="styled">
+          <dt>mixed</dt>
+          <dd>The return value of the method mapped</dd>
+        </dl>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.12.0-dev - Copyright (C) 2010 - 2019 by Arne Blankerts and Contributors</span>
+    </footer>
+  </body>
+</html>
