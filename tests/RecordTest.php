@@ -283,4 +283,17 @@ class RecordTest extends TestCase
 
         $this->uut->get_something();
     }
+
+    /**
+     * Tests the namesake method/feature
+     */
+    public function testIteratorAggregate()
+    {
+        $this->uut->setData(self::SOME_DATA);
+
+       foreach ($this->uut as $field => $value) {
+           $this->assertArrayHasKey($field, self::SOME_DATA);
+           $this->assertEquals(self::SOME_DATA[$field], $value);
+       }
+    }
 }
