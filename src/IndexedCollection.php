@@ -58,7 +58,9 @@ class IndexedCollection extends Collection implements \ArrayAccess
     public function set($index, $item)
     {
         // check for null items
-        if (is_null($item)) return $this->unset($index);
+        if (is_null($item)) {
+            return $this->unset($index);
+        }
 
         $this->items[$index] = $item;
         return $this;

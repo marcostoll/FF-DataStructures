@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace FF\Tests\DataStructures;
 
+use FF\DataStructures\Collection;
 use FF\DataStructures\OrderedCollection;
 use PHPUnit\Framework\TestCase;
 
@@ -185,7 +186,6 @@ class OrderedCollectionTest extends TestCase
     {
         $this->uut->push(...self::SOME_ITEMS);
         $this->assertEquals(self::SOME_ITEMS, $this->uut->getItems());
-
     }
 
     /**
@@ -205,7 +205,6 @@ class OrderedCollectionTest extends TestCase
     {
         $this->uut->unshift(...self::SOME_ITEMS);
         $this->assertEquals(self::SOME_ITEMS, $this->uut->getItems());
-
     }
 
     /**
@@ -253,7 +252,7 @@ class OrderedCollectionTest extends TestCase
      */
     public function testAppendCollection()
     {
-        $collection = new \FF\DataStructures\Collection(['foo' => 'bar', 'fii' => 'baz']);
+        $collection = new Collection(['foo' => 'bar', 'fii' => 'baz']);
         $same = $this->uut->setItems(self::SOME_ITEMS)->append($collection);
         $this->assertSame($this->uut, $same);
         $this->assertSame(count(self::SOME_ITEMS) + count($collection), count($this->uut));
@@ -276,7 +275,7 @@ class OrderedCollectionTest extends TestCase
      */
     public function testSort()
     {
-        $naturalSort = function($itemA, $itemB) {
+        $naturalSort = function ($itemA, $itemB) {
             return $itemA <=> $itemB;
         };
 

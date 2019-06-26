@@ -291,9 +291,9 @@ class RecordTest extends TestCase
     {
         $this->uut->setData(self::SOME_DATA);
 
-       foreach ($this->uut as $field => $value) {
-           $this->assertArrayHasKey($field, self::SOME_DATA);
-           $this->assertEquals(self::SOME_DATA[$field], $value);
-       }
+        foreach ($this->uut as $field => $value) {
+            $this->assertArrayHasKey($field, self::SOME_DATA);
+            $this->assertEquals(self::SOME_DATA[$field], $value);
+        }
     }
 }

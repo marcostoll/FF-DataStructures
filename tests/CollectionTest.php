@@ -104,7 +104,7 @@ class CollectionTest extends TestCase
      */
     public function testMap()
     {
-        $callback = function($item) {
+        $callback = function ($item) {
             return (string)$item . '::' . gettype($item);
         };
 
@@ -124,11 +124,11 @@ class CollectionTest extends TestCase
      */
     public function testFilter()
     {
-        $filterString = function($item) {
+        $filterString = function ($item) {
             return is_string($item);
         };
 
-        $filterAll = function($item) {
+        $filterAll = function ($item) {
             return false;
         };
 

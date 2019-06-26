@@ -84,7 +84,9 @@ class OrderedCollection extends IndexedCollection
         }
 
         // check for null items
-        if (is_null($item)) return $this->unset($offset);
+        if (is_null($item)) {
+            return $this->unset($offset);
+        }
 
         if ($this->has($offset)) {
             // replace
