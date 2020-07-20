@@ -14,7 +14,7 @@ by Marco Stoll
 Fast Forward, in short **FF**, is a template for building web applications. The **FF Family** is a series of basic
 repositories on which **FF** depends on but may also be used independently if desired.
 
-**FF** is not a framework in and of itself and therefore should not be called so. But you may orchestrate multiple 
+**FF** is not a framework in and of itself and therefore should not be called so. But you may orchestrate multiple
 **FF** components to build an web application skeleton that provides the most common tasks.
 
 # Introduction - What is FF\DataStructures?
@@ -37,14 +37,14 @@ various data structure classes are designed to hold arbitrary data and provide a
 ## Records
 
 A record is by definition a construct holding a flat list of data each identified by a unique string key. The **FF**
-approach regards the data elements as the record's *fields* and their identifiers a the *key*. The implementation 
-provides method to add/remove/manipulate single fields by using its key or a bunch if fields. You ma `clear()` a record
-or check if it `isEmpty()`.
+approach regards the data elements as the record's *fields*, and their identifiers as the *key*. The implementation
+provides method to add/remove/manipulate single fields by using its key, or a bunch if fields. You may `clear()` a
+record or check if it `isEmpty()`.
 
 THe `Record` implements the `IteratorAggregate` interface. So you may just iterate over its keys and fields.
 
     use FF\DataStructures\Record;
-    
+
     $myRecord = new Record([
         'foo' => 'bar',
         'my_field' => 42
@@ -52,7 +52,7 @@ THe `Record` implements the `IteratorAggregate` interface. So you may just itera
 
     foreach ($myRecord as $key => $field) {
         var_dump($key, $field);
-    } 
+    }
 
 ### Magic
 
@@ -65,17 +65,17 @@ require the field's key as a parameter you may use named methods composed of the
 An example:
 
     use FF\DataStructures\Record;
-    
+
     $myRecord = new Record([
         'foo' => 'bar',
         'my_field' => 42
     ]);
-    
+
     $foo = $myRecord->getFoo();         // equivalent to $myRecord->getField('foo');
     $myRecord->setFoo('baz');           // equivalent to $myRecord->setField('foo', 'baz');
     $check = $myRecord->hasMyField();   // equivalent to $myRecord->hasField(''my_field');
     $myRecord->unsetMyField();          // equivalent to $myRecord->unsetField(''my_field');
-    
+
 So instead of providing the field's key as (underscored, lowercased) string, you rather use the field's magic method
 with method names composed of 'get', 'set', 'has', or 'unset' followed by the studly-caps (a capital letter as the first
 character of each word within the underscored version)  version of the field's key.
@@ -84,9 +84,9 @@ character of each word within the underscored version)  version of the field's k
 
 ### Generic Collections
 
-Collections are in their most basic form a set of unordered elements. The **FF** implementation lets you store an 
+Collections are in their most basic form a set of unordered elements. The **FF** implementation lets you store an
 arbitrary amount of elements within a collection and provides methods to retrieve and replace its contents, count
-the number of elements via `getLength()` or `count($myCollection)`, `clear()` the entire collection, check if it 
+the number of elements via `getLength()` or `count($myCollection)`, `clear()` the entire collection, check if it
 `isEmpty()`, or just iterate over its elements within a loop.
 
 Additional you may either `filter()` its contents by using a custom filter callback or `map()` its set of elements
@@ -102,31 +102,31 @@ you access, manipulate or `search()` single elements within the collection by us
 `ArrayAccess` interface that lets you use instances of this class like an array.
 
     use FF\DataStructures\IndexedCollection;
-    
+
     $myCollection = new IndexCollection(['foo', 'bar', 'baz' => 42]);
-    
+
     var_dump(
         $myCollection[0],
         $myCollection[1],
         $myCollection['baz]
     );
-    
+
 **Beware**: An `IndexedCollection` instance is not aware of any ordering within its set of elements.
 
 ### Ordered Collection
 
-On top of the `IndexedCollection` their is the `OrderedCollection`. This class comes with an implementation of an 
+On top of the `IndexedCollection` there is the `OrderedCollection`. This class comes with an implementation of an
 ordered set of elements. So it's aware of its first or last element and lets you `append()` new elements to the end
 of its set or `truncate()` the amount of stored elements to a specific length.
-It event comes with a set of methods the use it as a stack.
+It even comes with a set of methods the use it as a stack.
 
     use FF\DataStructures\OrderedCollection;
-        
+
     $myCollection = new OrderedCollection();
-    
+
     $myCollection->push('foo')->push('bar')->unshift('baz');    // contains now 'baz', foo', 'bar'
     var_dump($myCollection->pop());                             // contains now 'baz', 'foo'
-    var_dump($myCollection->shift());                           // contains now 'foo' 
+    var_dump($myCollection->shift());                           // contains now 'foo'
 
 # Road Map
 
