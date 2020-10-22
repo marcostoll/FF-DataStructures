@@ -83,7 +83,7 @@
         <h2 id="synopsis">Synopsis</h2>
         <div class="synopsis">class Record
                 implements
-                <a title="IteratorAggregate" href="../interfaces/IteratorAggregate.xhtml">IteratorAggregate</a>
+                <a title="Countable" href="../interfaces/Countable.xhtml">Countable</a>,<a title="IteratorAggregate" href="../interfaces/IteratorAggregate.xhtml">IteratorAggregate</a>
             {<br/><ul class="none"><li>// members</li><li>protected <span title="FF\DataStructures\IndexedCollection">IndexedCollection</span> <a href="#members">$data</a>;
                     </li></ul><ul class="none"><li>// methods</li><li>public void <a title="FF\DataStructures\Record" href="../classes/FF_DataStructures_Record/__construct.xhtml">__construct</a>()
                     </li><li>public $this <a title="FF\DataStructures\Record" href="../classes/FF_DataStructures_Record/setData.xhtml">setData</a>()
@@ -100,6 +100,7 @@
                     </li><li>public bool <a title="FF\DataStructures\Record" href="../classes/FF_DataStructures_Record/__isset.xhtml">__isset</a>()
                     </li><li>public void <a title="FF\DataStructures\Record" href="../classes/FF_DataStructures_Record/__unset.xhtml">__unset</a>()
                     </li><li>public mixed <a title="FF\DataStructures\Record" href="../classes/FF_DataStructures_Record/__call.xhtml">__call</a>()
+                    </li><li>public int <a title="FF\DataStructures\Record" href="../classes/FF_DataStructures_Record/count.xhtml">count</a>()
                     </li><li>public <span title="ArrayIterator">ArrayIterator</span> <a title="FF\DataStructures\Record" href="../classes/FF_DataStructures_Record/getIterator.xhtml">getIterator</a>()
                     </li></ul>
 
@@ -108,6 +109,9 @@
         <div class="styled">
           <h4>Implements</h4>
           <ul>
+            <li>
+              <a title="Countable" href="../interfaces/Countable.xhtml">Countable</a>
+            </li>
             <li>
               <a title="IteratorAggregate" href="../interfaces/IteratorAggregate.xhtml">IteratorAggregate</a>
             </li>
@@ -118,7 +122,7 @@
           <tr>
             <td>Methods</td>
             <td class="percent">0%</td>
-            <td class="nummeric">0 / 16</td>
+            <td class="nummeric">0 / 17</td>
           </tr>
           <tr>
             <td>Lines</td>
@@ -173,6 +177,8 @@
                 — Provides generic access for removing a record's field</li>
             <li id="clear"><a title="FF\DataStructures\Record" href="../classes/FF_DataStructures_Record/clear.xhtml">clear()</a>
                 — Removes all data from the record</li>
+            <li id="count"><a title="FF\DataStructures\Record" href="../classes/FF_DataStructures_Record/count.xhtml">count()</a>
+                — Retrieves the amount of data entries stored within the record</li>
             <li id="getData">
               <a title="FF\DataStructures\Record" href="../classes/FF_DataStructures_Record/getData.xhtml">getData()</a>
             </li>
