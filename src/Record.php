@@ -26,7 +26,7 @@ use FF\Utils\StringUtils;
  * @see __call()
  * @see http://en.wikipedia.org/wiki/Record_%28computer_science%29
  */
-class Record implements \IteratorAggregate
+class Record implements \Countable, \IteratorAggregate
 {
     /**
      * @var IndexedCollection
@@ -263,6 +263,23 @@ class Record implements \IteratorAggregate
             default:
                 return null;
         }
+    }
+
+    // </editor-fold>
+
+    // <editor-fold defaultstate="collapsed" desc="[ \Countable ]">
+
+    /**
+     * Retrieves the amount of data entries stored within the record
+     *
+     * Implementation of the Countable interface
+     *
+     * @return int
+     * @see \Countable
+     */
+    public function count(): int
+    {
+        return count($this->data);
     }
 
     // </editor-fold>

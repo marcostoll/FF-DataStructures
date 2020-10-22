@@ -287,6 +287,16 @@ class RecordTest extends TestCase
     /**
      * Tests the namesake method/feature
      */
+    public function testCountable()
+    {
+        var_dump($this->uut);
+        $this->assertEquals(0, count($this->uut));
+        $this->assertEquals(count(self::SOME_DATA), count($this->uut->setData(self::SOME_DATA)));
+    }
+
+    /**
+     * Tests the namesake method/feature
+     */
     public function testIteratorAggregate()
     {
         $this->uut->setData(self::SOME_DATA);
