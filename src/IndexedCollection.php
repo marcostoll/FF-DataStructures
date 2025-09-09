@@ -117,6 +117,7 @@ class IndexedCollection extends Collection implements \ArrayAccess
     /**
      * {@inheritdoc}
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return $this->get($offset);
@@ -125,17 +126,19 @@ class IndexedCollection extends Collection implements \ArrayAccess
     /**
      * {@inheritdoc}
      */
-    public function offsetSet($offset, $value)
+    #[\ReturnTypeWillChange]
+    public function offsetSet($offset, $value): void
     {
-        return $this->set($offset, $value);
+        $this->set($offset, $value);
     }
 
     /**
      * {@inheritdoc}
      */
-    public function offsetUnset($offset)
+    #[\ReturnTypeWillChange]
+    public function offsetUnset($offset): void
     {
-        return $this->unset($offset);
+        $this->unset($offset);
     }
 
     // </editor-fold>
